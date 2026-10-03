@@ -1,0 +1,181 @@
+﻿# =============================================================================
+# platform-core — Next.js (TypeScript) + Python (FastAPI) + Docker
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Environment & Secrets
+# NEVER commit real .env files — only .env.example files
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets/
+
+
+# -----------------------------------------------------------------------------
+# Next.js / Node.js (frontend/)
+# -----------------------------------------------------------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/build/
+frontend/.vercel/
+frontend/tsconfig.tsbuildinfo
+frontend/.turbo/
+
+# Next.js cache
+frontend/.next/cache/
+
+# npm / yarn / pnpm
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+frontend/.yarn/cache
+frontend/.yarn/unplugged
+frontend/.yarn/build-state.yml
+frontend/.yarn/install-state.gz
+
+# TypeScript incremental builds
+*.tsbuildinfo
+
+
+# -----------------------------------------------------------------------------
+# Python / FastAPI (backend/)
+# -----------------------------------------------------------------------------
+
+# Virtual environments
+backend/venv/
+backend/.venv/
+backend/env/
+backend/.env_venv/
+backend/ENV/
+backend/.pyenv/
+
+# Byte-compiled / optimised / DLL files
+backend/__pycache__/
+backend/**/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+backend/*.egg-info/
+backend/dist/
+backend/build/
+backend/.eggs/
+backend/site-packages/
+
+# Testing & coverage
+backend/.pytest_cache/
+backend/.coverage
+backend/coverage.xml
+backend/htmlcov/
+backend/.hypothesis/
+backend/.tox/
+backend/nosetests.xml
+backend/test-results/
+
+# MyPy / type checkers
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+backend/.pytype/
+backend/.pyre/
+
+# Celery
+backend/celerybeat-schedule
+backend/celerybeat.pid
+
+# Scratch / temp files
+backend/scratch/
+
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+# Ignore local override files but keep docker-compose.yml
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+
+
+# -----------------------------------------------------------------------------
+# IDEs & Editors
+# -----------------------------------------------------------------------------
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+
+
+# -----------------------------------------------------------------------------
+# OS-generated files
+# -----------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+
+# -----------------------------------------------------------------------------
+# Logs & temporary files
+# -----------------------------------------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+
+# -----------------------------------------------------------------------------
+# Agent / AI tooling (keep AGENTS.md, ignore generated caches)
+# -----------------------------------------------------------------------------
+.agents/.cache/
+.gemini/
